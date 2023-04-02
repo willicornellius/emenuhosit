@@ -1,0 +1,141 @@
+.hero__section1 {
+  background: #d6e5fb;
+  margin-top: -1px;
+}
+
+.hero__content h2 {
+  color: #DAA520;
+  /* #0a1d37; */
+  font-style: 2rem;
+  font-weight: 600;
+  margin: 20px 0px;
+}
+
+.hero__content p {
+  color: #0a1d37;
+  line-height: 28px;
+  padding-top: 1;
+}
+
+.hero__section1 p:nth-child(1) {
+  font-weight: 500;
+}
+.buy__btn {
+  border: none;
+  outline: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  background: #696969;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 40px;
+}
+
+.buy__btn a {
+  color: #fff;
+}
+
+.hero__content {
+  padding-top: 45px;
+}
+
+.timer__count {
+  background: #0a1d37;
+  height: 300px;
+}
+
+.timer__count img {
+  width: 70% !important;
+  height: 70% !important;
+  object-fit: contain;
+}
+
+.store__btn {
+  background: #fff;
+  color: #0a1d37;
+  font-weight: 600;
+}
+
+.store__btn a:hover {
+  color: #0a1d37;
+}
+.section__title {
+  font-size: 1.7rem;
+  padding-top: 45px;
+  padding-bottom: 45px;
+}
+.hero__content p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media only screen and (max-width: 992px) {
+  .hero__content h2 {
+    font-size: 2rem;
+  }
+
+  .section__title {
+    font-size: 1.7rem;
+    padding-top: 45px;
+  }
+
+  .clock__top-content {
+    text-align: center;
+  }
+
+  .clock__top-content h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .clock__top-content h3 {
+    font-size: 1rem !important;
+  }
+
+  .count__down-col {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero__content h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero__content p {
+    font-size: 0.9rem;
+  }
+
+  .buy__btn a {
+    font-size: 0.9rem;
+  }
+  .section__title {
+    padding-top: 45px;
+    font-size: 1.4rem;
+  }
+  .hero__img {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: auto;
+  }
+  @media only screen and (max-width: 428px) {
+    .hero__img {
+      display: flex;
+      justify-content: center;
+      height: 300px;
+      width: 365px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .hero__content {
+      padding-top: 0;
+      margin-bottom: 40px;
+    }
+    .hero__img {
+      height: 300px;
+      width: auto;
+    }
+  }
+}
