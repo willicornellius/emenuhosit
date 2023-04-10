@@ -72,7 +72,7 @@ app.post("/api/midtrans", (req, res) => {
       first_name: req.body.name,
       last_name: "-",
       email: req.body.email,
-      phone: "08111222333",
+      phone: "081287766617",
     },
     // item_details: [
     //   {
