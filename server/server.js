@@ -64,8 +64,8 @@ app.post("/api/midtrans", (req, res) => {
       quantity: req.body.qty,
       name: name,
       brand: "Midtrans",
-      category: "Laundry",
-      merchant_name: "Hars Shoe Cleaner",
+      category: "Restaurant",
+      merchant_name: "Hosit Bangka Kuliner",
     },
 
     customer_details: {

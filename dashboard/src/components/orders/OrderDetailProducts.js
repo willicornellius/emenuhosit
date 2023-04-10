@@ -19,9 +19,9 @@ const OrderDetailProducts = (props) => {
     <table className="table border table-lg">
       <thead>
         <tr>
-          <th style={{ width: "40%" }}>Layanan Laundry</th>
-          <th style={{ width: "20%" }}>Harga Layanan</th>
-          <th style={{ width: "20%" }}>Sepatu /pasang</th>
+          <th style={{ width: "40%" }}>Pesanan</th>
+          <th style={{ width: "20%" }}>Harga Menu</th>
+          <th style={{ width: "20%" }}>Makanan / perpcs</th>
           <th style={{ width: "20%" }} className="text-end">
             Total
           </th>
