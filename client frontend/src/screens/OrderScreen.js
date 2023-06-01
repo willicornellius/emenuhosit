@@ -160,20 +160,20 @@ const OrderScreen = ({ match }) => {
                         </p>
                       </div>
                     )}
-                    {order.isLaundry ? (
+                    {/* {order.isPesanan ? (
                       <div className="bg-info  p-2 col-12">
                         <p className="text-white text-center text-sm-start">
-                          Status Laundry : Selesai
-                          {/* <p>{moment(order.paidAt).calendar()}</p> */}
+                          Status Pesanan : Selesai
+                          <p>{moment(order.paidAt).calendar()}</p>
                         </p>
                       </div>
                     ) : (
                       <div className="bg-danger p-2 col-12">
                         <p className="text-white text-center text-sm-start">
-                          Status Laundry : -
+                          Status Pesanan : -
                         </p>
                       </div>
-                    )}
+                    )} */}
                   </div>
                 </div>
               </div>
@@ -199,7 +199,7 @@ const OrderScreen = ({ match }) => {
                       {order.shippingAddress.city}{" "}
                     </p>
                     pickup */}
-                    {order.isPickup ? (
+                    {/* {order.isPickup ? (
                       <div className="bg-info p-2 col-12">
                         <p className="text-white text-center text-sm-start">
                           Pickup {moment(order.pickupAt).calendar()}
@@ -211,7 +211,7 @@ const OrderScreen = ({ match }) => {
                           Not Pickup
                         </p>
                       </div>
-                    )}
+                    )} */}
                     {/* delivered */}
                     {order.isDelivered ? (
                       <div className="bg-info p-2 col-12">

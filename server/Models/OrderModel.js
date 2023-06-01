@@ -21,10 +21,10 @@ const orderSchema = mongoose.Schema(
       },
     ],
     shippingAddress: {
-      address: { type: String, required: true },
-      city: { type: String, required: true },
-      postalCode: { type: String, required: true },
-      country: { type: String, required: true },
+      address: { type: String, required: false },
+      city: { type: String, required: false },
+      postalCode: { type: String, required: false },
+      country: { type: String, required: false },
     },
     paymentMethod: {
       type: String,
@@ -74,14 +74,6 @@ const orderSchema = mongoose.Schema(
       default: false,
     },
     pickupAt: {
-      type: Date,
-    },
-    isLaundry: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
-    laundryAt: {
       type: Date,
     },
   },

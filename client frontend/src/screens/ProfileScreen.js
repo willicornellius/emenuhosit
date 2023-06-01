@@ -74,7 +74,7 @@ const ProfileScreen = () => {
                     aria-controls="v-pills-profile"
                     aria-selected="false"
                   >
-                    List Order Laundry
+                    List Order Pesanan
                     <span className="badge2">{orders ? orders.length : 0}</span>
                   </button>
                 </div>

@@ -109,7 +109,7 @@ orderRouter.put(
   })
 );
 
-// ORDER IS PAID
+// ORDER IS DELIVERED
 orderRouter.put(
   "/:id/delivered",
   protect,
@@ -149,24 +149,24 @@ orderRouter.put(
   })
 );
 
-// ORDER IS Laundry
-orderRouter.put(
-  "/:id/laundry",
-  protect,
-  asyncHandler(async (req, res) => {
-    const order = await Order.findById(req.params.id);
+// ORDER IS LAUNDRY
+// orderRouter.put(
+//   "/:id/laundry",
+//   protect,
+//   asyncHandler(async (req, res) => {
+//     const order = await Order.findById(req.params.id);
 
-    if (order) {
-      order.isLaundry = true;
-      order.laundryAt = Date.now();
+//     if (order) {
+//       order.isLaundry = true;
+//       order.LaundryAt = Date.now();
 
-      const updatedOrder = await order.save();
-      res.json(updatedOrder);
-    } else {
-      res.status(404);
-      throw new Error("Order Not Found");
-    }
-  })
-);
+//       const updatedOrder = await order.save();
+//       res.json(updatedOrder);
+//     } else {
+//       res.status(404);
+//       throw new Error("Order Not Found");
+//     }
+//   })
+// );
 
 export default orderRouter;

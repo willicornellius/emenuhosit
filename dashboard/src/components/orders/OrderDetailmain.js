@@ -7,7 +7,7 @@ import {
   deliverOrder,
   getOrderDetails,
   pickupOrder,
-  laundryOrder,
+  LaundryOrder,
 } from "../../Redux/Actions/OrderActions";
 import Loading from "../LoadingError/Loading";
 import Message from "../LoadingError/Error";
@@ -27,7 +27,7 @@ const OrderDetailmain = (props) => {
   const { loading: loadingPickup, success: successPickup } = orderPickup;
 
   const orderLaundry = useSelector((state) => state.orderLaundry);
-  const { loading: loadingLaundry, success: successLaundry } = orderLaundry;
+  const { loading: loadinglaundry, success: successLaundry } = orderLaundry;
 
   useEffect(() => {
     dispatch(getOrderDetails(orderId));
@@ -39,9 +39,9 @@ const OrderDetailmain = (props) => {
   const pickupHandler = () => {
     dispatch(pickupOrder(order));
   };
-  const laundryHandler = () => {
-    dispatch(laundryOrder(order));
-  };
+  // const LaundryHandler = () => {
+  //   dispatch(LaundryOrder(order));
+  // };
 
   return (
     <section className="content-main">
@@ -137,30 +137,7 @@ const OrderDetailmain = (props) => {
                     </>
                   )}
                 </div>
-                <div className="col-lg-12">
-                  <div className="box shadow-sm bg-light text-center">
-                    Status Laundry
-                    <div>
-                      {/* deliver */}
-                      {order.isLaundry ? (
-                        <button className="btn btn-success col-12">
-                          Laundry Selesai ({" "}
-                          {moment(order.isLaundryAt).format("MMM Do YY")})
-                        </button>
-                      ) : (
-                        <>
-                          {loadingLaundry && <Loading />}
-                          <button
-                            onClick={laundryHandler}
-                            className="btn btn-dark col-12"
-                          >
-                            Tandai Telah Selesai
-                          </button>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>

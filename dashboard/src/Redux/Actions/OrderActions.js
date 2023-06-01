@@ -5,9 +5,9 @@ import {
   ORDER_PICKUP_FAIL,
   ORDER_PICKUP_REQUEST,
   ORDER_PICKUP_SUCCESS,
-  ORDER_LAUNDRY_FAIL,
-  ORDER_LAUNDRY_REQUEST,
-  ORDER_LAUNDRY_SUCCESS,
+  // ORDER_LAUNDRY_FAIL,
+  // ORDER_LAUNDRY_REQUEST,
+  // ORDER_LAUNDRY_SUCCESS,
   ORDER_DETAILS_FAIL,
   ORDER_DETAILS_REQUEST,
   ORDER_DETAILS_SUCCESS,
@@ -155,37 +155,37 @@ export const pickupOrder = (order) => async (dispatch, getState) => {
 };
 
 //Order Laundry
-export const laundryOrder = (order) => async (dispatch, getState) => {
-  try {
-    dispatch({ type: ORDER_LAUNDRY_REQUEST });
+// export const LaundryOrder = (order) => async (dispatch, getState) => {
+//   try {
+//     dispatch({ type: ORDER_LAUNDRY_REQUEST });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
+//     const {
+//       userLogin: { userInfo },
+//     } = getState();
 
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
+//     const config = {
+//       headers: {
+//         Authorization: `Bearer ${userInfo.token}`,
+//       },
+//     };
 
-    const { data } = await axios.put(
-      `/api/orders/${order._id}/laundry`,
-      {},
-      config
-    );
-    dispatch({ type: ORDER_LAUNDRY_SUCCESS, payload: data });
-  } catch (error) {
-    const message =
-      error.response && error.response.data.message
-        ? error.response.data.message
-        : error.message;
-    if (message === "Not authorized, token failed") {
-      dispatch(logout());
-    }
-    dispatch({
-      type: ORDER_LAUNDRY_FAIL,
-      payload: message,
-    });
-  }
-};
+//     const { data } = await axios.put(
+//       `/api/orders/${order._id}/laundry`,
+//       {},
+//       config
+//     );
+//     dispatch({ type: ORDER_LAUNDRY_SUCCESS, payload: data });
+//   } catch (error) {
+//     const message =
+//       error.response && error.response.data.message
+//         ? error.response.data.message
+//         : error.message;
+//     if (message === "Not authorized, token failed") {
+//       dispatch(logout());
+//     }
+//     dispatch({
+//       type: ORDER_LAUNDRY_FAIL,
+//       payload: message,
+//     });
+//   }
+// };
