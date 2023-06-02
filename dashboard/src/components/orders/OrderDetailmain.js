@@ -110,12 +110,11 @@ const OrderDetailmain = (props) => {
                     </button>
                   ) : (
                     <>
-                      {loadingPickup && <Loading />}
+                    {loadingPickup && <Loading />}
                       <button
-                        onClick={pickupHandler}
+                        //onClick={pickupHandler}
                         className="btn btn-dark col-12"
                       >
-                        Tandai Telah Diantar
                       </button>
                     </>
                   )}

@@ -20,11 +20,11 @@ const orderSchema = mongoose.Schema(
         },
       },
     ],
-    shippingAddress: {
-      address: { type: String, required: false },
+    infopesanan: {
+      infotable: { type: String, required: false },
       city: { type: String, required: false },
       postalCode: { type: String, required: false },
-      country: { type: String, required: false },
+      keterangan: { type: String, required: false },
     },
     paymentMethod: {
       type: String,
@@ -42,11 +42,11 @@ const orderSchema = mongoose.Schema(
       required: true,
       default: 0.0,
     },
-    shippingPrice: {
-      type: Number,
-      required: true,
-      default: 0.0,
-    },
+    //shippingPrice: {
+      //type: Number,
+      //required: true,
+      //default: 0.0,
+    //},
     totalPrice: {
       type: Number,
       required: true,
@@ -68,11 +68,11 @@ const orderSchema = mongoose.Schema(
     deliveredAt: {
       type: Date,
     },
-    isPickup: {
-      type: Boolean,
-      required: true,
-      default: false,
-    },
+    //isPickup: {
+      //type: Boolean,
+      //required: true,
+      //default: false,
+    //},
     pickupAt: {
       type: Date,
     },
